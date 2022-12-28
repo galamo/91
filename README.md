@@ -25,3 +25,12 @@
 # Class exercise
 
 ![img1](./pizza-blocks.png)
+
+
+# Homework 28-12
+1. build the following layout ( chess game )
+![img1](./bootstrap-homework-28-12%20homework/chess.com.png)
+
+2. Use flex/bootstrap what ever you prefer to design the page.
+3. Use images instead of the chess boards and icons ( search for images in google)
+
