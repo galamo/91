@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./bootstrap.css" />
+  <link rel="stylesheet" href="./myStyle.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="MyClass">
+    <div style="text-align: center;">
+      <h1> Avi<span class="badge bg-primary">2</span> Pizza </h1>
+      <img style="margin-top:30px"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/1200px-Dominos_pizza_logo.svg.png"
+        height="200" width="400" />
+      <div>
+        <div style="margin-top:30px">
+          <h6><span>Please wait while loading your details</span></h6>
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Order Now</h4>
+        <h5>Get <span class="badge bg-success">50%</span> Discount</h5>
+
+        <div style="margin:10px 10px ;display: flex; justify-content: space-between;">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select Size</option>
+            <option value="1">L</option>
+            <option value="2">M</option>
+            <option value="3">XL</option>
+          </select>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select Toppings</option>
+            <option value="1">Onion</option>
+            <option value="2">Olives</option>
+            <option value="3">Extra Avi/May/Yuval</option>
+          </select>
+
+        </div>
+        <div>
+          <button type="button" class="btn btn-success">
+            Click Here to Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
