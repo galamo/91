@@ -14,7 +14,6 @@
 }
 
 .size-container{
-    background-color: aquamarine;
     display: flex;
 }
 .size-container > div{
@@ -32,7 +31,6 @@
 }
 
 .toppings-container{
-    background-color:darkorchid ;
 }
 
 .toppings-full{
@@ -40,13 +38,11 @@
 }
 
 .left-half{
-background-color: darkmagenta;
 width: 50%;
 padding:10px
 }
 
 .right-half{
-    background-color: rgb(0, 139, 134);
     width: 50%;
     padding:10px
 }
