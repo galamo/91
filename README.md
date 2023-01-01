@@ -34,3 +34,5 @@
 2. Use flex/bootstrap what ever you prefer to design the page.
 3. Use images instead of the chess boards and icons ( search for images in google)
 
+# Homework 1.1 
+- https://app.diagrams.net/
