@@ -1,0 +1,39 @@
+.mainChessBoard{
+    background-color: pink;
+}
+
+.header{
+    background-color: purple;
+    font-weight: bold;
+    color: white;
+    padding:10px
+}
+
+.mainSection{
+    background-color: aquamarine;
+}
+
+.mainSection > div {
+    background-color: blue;
+    border: 2px solid black;
+    height: 400px
+}
+
+.mainSection .cardHeader {
+    background-color: blueviolet;
+    /* padding:10px */
+}
+
+.mainSection .cardBody {
+    background-color: green;
+    /* margin:5px */
+}
+
+.chessCard{
+    margin:5px
+}
+
+.singleItem{
+    display: flex;
+    margin-top:5px
+}
