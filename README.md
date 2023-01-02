@@ -36,3 +36,6 @@
 
 # Homework 1.1 
 - https://app.diagrams.net/
+- Watch the Online academic course in the enablee 
+- Solve all the exercises on page 11
+- Solve exercises 1,2,3 on page 15
