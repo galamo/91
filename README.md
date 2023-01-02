@@ -36,8 +36,8 @@
 
 # Homework 1.1 
 - https://app.diagrams.net/
-- Watch the Online academic course in the enablee 
-- Solve all the exercises on page 11
-- Solve exercises 1,2,3 on page 15
+- Watch the Online academic course in the enablee - see screenshot below
+- Solve all the exercises on page 11 ( חוברת מבוא לתכנות )
+- Solve exercises 1,2,3 on page 15. ( חוברת מבוא לתכנות )
 - ![img1](.//Screen%20Shot%202023-01-02%20at%2013.02.06.png)
 
