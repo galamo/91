@@ -39,5 +39,5 @@
 - Watch the Online academic course in the enablee 
 - Solve all the exercises on page 11
 - Solve exercises 1,2,3 on page 15
-- ![img1](./bootstrap-homework-25-12//Screen%20Shot%202023-01-02%20at%2013.02.06.png)
+- ![img1](.//Screen%20Shot%202023-01-02%20at%2013.02.06.png)
 
