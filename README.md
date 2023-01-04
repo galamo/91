@@ -26,18 +26,24 @@
 
 ![img1](./pizza-blocks.png)
 
-
 # Homework 28-12
+
 1. build the following layout ( chess game )
-![img1](./bootstrap-homework-28-12%20homework/chess.com.png)
+   ![img1](./bootstrap-homework-28-12%20homework/chess.com.png)
 
 2. Use flex/bootstrap what ever you prefer to design the page.
 3. Use images instead of the chess boards and icons ( search for images in google)
 
-# Homework 1.1 
+# Homework 1.1
+
 - https://app.diagrams.net/
 - Watch the Online academic course in the enablee - see screenshot below
 - Solve all the exercises on page 11 ( חוברת מבוא לתכנות )
 - Solve exercises 1,2,3 on page 15. ( חוברת מבוא לתכנות )
 - ![img1](.//Screen%20Shot%202023-01-02%20at%2013.02.06.png)
 
+# Homework
+
+1. Write the distance exercise in Javascript ( open new file distance.js , load the file in the HTML)
+2. Page 15 All exercises ( flow charts )
+3. Page 15 Write ex3 & ex4 in Javascript
