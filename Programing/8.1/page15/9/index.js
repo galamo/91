@@ -10,3 +10,6 @@ console.log("From " + numBetween10And99 + " To " + opositeNumber);
 console.log(
   (numBetween10And99 % 10) * 10 + parseInt(numBetween10And99 / 10) * 1
 );
+
+
+
