@@ -42,8 +42,11 @@
 - Solve exercises 1,2,3 on page 15. ( חוברת מבוא לתכנות )
 - ![img1](.//Screen%20Shot%202023-01-02%20at%2013.02.06.png)
 
-# Homework
+# Homework 4.1
 
 1. Write the distance exercise in Javascript ( open new file distance.js , load the file in the HTML)
 2. Page 15 All exercises ( flow charts )
 3. Page 15 Write ex3 & ex4 in Javascript
+
+
+# Homework 8.1
