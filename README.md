@@ -48,5 +48,8 @@
 2. Page 15 All exercises ( flow charts )
 3. Page 15 Write ex3 & ex4 in Javascript
 
-
 # Homework 8.1
+
+1. Page 17 - ex 3 ( in JavaScript )
+2. Page 17 - ex 4 ( in JavaScript + flow chart )
+3. Page 17 - ex 5 ( in JavaScript + flow chart )
