@@ -40,5 +40,5 @@ function convertUserToEmail() {
   console.log("Start convertUserToEmail");
   console.log("End convertUserToEmail");
 }
-// call function
+// call function ( execution )
 convertUserToEmail();
