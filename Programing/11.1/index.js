@@ -113,3 +113,6 @@ function buyInStore(product) {
 
 var pName = prompt("What would you like to buy?");
 console.log(buyInStore(pName));
+
+var age = prompt("what is your age?");
+console.log(typeof parseInt(age));
