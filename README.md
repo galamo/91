@@ -53,3 +53,17 @@
 1. Page 17 - ex 3 ( in JavaScript )
 2. Page 17 - ex 4 ( in JavaScript + flow chart )
 3. Page 17 - ex 5 ( in JavaScript + flow chart )
+
+# 11.1
+
+## 1
+
+- Write a function that print your name
+- Call the Function
+- See the log output
+
+## 2
+
+- Call the function from #1 twice
+
+# Homework
