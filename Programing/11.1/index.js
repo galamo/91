@@ -90,3 +90,26 @@ var post2 = getCarPost("BMW", 2022, "x5", 100, 1, 650000, 0505381691);
 console.log(post2);
 var post3 = getApartmentPost("Ashdod", 5, "2.2m");
 console.log(post3);
+
+// var productName = prompt("Enter your product name");
+// var productType = prompt("Enter your product type");
+// console.log(productName, productType);
+
+function buyInStore(product) {
+  if (product == "milk") {
+    return 12;
+  } else if (product == "steak") {
+    return 100;
+  } else if (product == "pasta") {
+    return 8;
+  } else {
+    return "We dont have this product!";
+  }
+}
+
+// console.log(buyInStore("chocolate"));
+// console.log(buyInStore("milk"));
+// console.log(buyInStore("steak"));
+
+var pName = prompt("What would you like to buy?");
+console.log(buyInStore(pName));
