@@ -92,7 +92,7 @@ the function will return the recipet with the price
 
 7. write a function that receive your weekly budget ( from prompt function ) and return "Stop waste your money" in case the budget is over 1000 ILS, if its less return "Good Job - keep save your money"
 
-# 15.11
+# 15.1
 
 ## Ex
 
@@ -101,3 +101,14 @@ the function will return the recipet with the price
 1. input - your name ( use prompt )
 2. output - print your name 10 times
 3. advanced: print your name X times - according to another input ( use prompt )
+
+### Homework Page 25 ex 5 ( with the crazy teacher )
+
+1. add option to receive the numberOfStudents ( from prompt )
+2. sum all the grades
+3. print the total sum
+
+### Homework Page 25
+
+1. exercises 4 - 12
+2. watch JS academic online
