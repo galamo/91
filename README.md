@@ -67,23 +67,27 @@
 - Call the function from #1 twice
 
 # Homework
+
 1. Page 40 Ex1.
-2. Write a function that recieve 3 numbers ( from prompt function ) , the function will calculate the avarage of those numbers and return the avarage.
-in the main program print the avarage to the console.log
-3. write a function that recieve country name ( from prompt function ) and return "yes - this is my country" if the selected country is "israel" otherwise return "not my country"
-4. write a function that receive salary ( from prompt function ) and return the new salaray after 10% raise
-5. write a function that receive order of pizza ( from prompt function ) size, toppings with comma delimiter - ","  and address
-for example:
+2. Write a function that receive 3 numbers ( from prompt function ) , the function will calculate the average of those numbers and return the average.
+   in the main program print the average to the console.log
+3. write a function that receive country name ( from prompt function ) and return "yes - this is my country" if the selected country is "israel" otherwise return "not my country"
+4. write a function that receive salary ( from prompt function ) and return the new salary after 10% raise
+5. write a function that receive order of pizza ( from prompt function ) size, toppings with comma delimiter - "," and address
+   for example:
+
 ```js
-var size = prompt("What size you want?")
-var toppings = prompt("What toppings you want?")
-var address = prompt("What is your full address?")
+var size = prompt("What size you want?");
+var toppings = prompt("What toppings you want?");
+var address = prompt("What is your full address?");
 ```
+
 the function will return the recipet with the price
+
 - size small - 20ILS
 - size med - 40ILS
 - size large - 60ILS
 
-6. write a function that recieve a value ( from prompt function ) and return the type of the value
+6. write a function that receive a value ( from prompt function ) and return the type of the value
 
-7. write a function that recieve your weekly budget ( from prompt function ) and return "Stop waste your money" in case the budget is over 1000 ILS, if its less return "Good Job - keep save your money"
+7. write a function that receive your weekly budget ( from prompt function ) and return "Stop waste your money" in case the budget is over 1000 ILS, if its less return "Good Job - keep save your money"
