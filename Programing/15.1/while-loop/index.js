@@ -9,4 +9,5 @@ function init() {
   console.log("Thanks Alon");
 }
 
+// run in the beginning
 init();

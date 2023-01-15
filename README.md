@@ -91,3 +91,13 @@ the function will return the recipet with the price
 6. write a function that receive a value ( from prompt function ) and return the type of the value
 
 7. write a function that receive your weekly budget ( from prompt function ) and return "Stop waste your money" in case the budget is over 1000 ILS, if its less return "Good Job - keep save your money"
+
+# 15.11
+
+## Ex
+
+- Loop - while
+
+1. input - your name ( use prompt )
+2. output - print your name 10 times
+3. advanced: print your name X times - according to another input ( use prompt )
