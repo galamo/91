@@ -34,5 +34,43 @@ function ex11() {
   }
   return numberOfDigits;
 }
-var result2 = ex11();
-console.log(`The number of digits is: ${result2}`);
+// var result2 = ex11();
+// console.log(`The number of digits is: ${result2}`);
+
+function ex12() {
+  // get the number of digits
+  //   1234  theRightDigit = 4
+  //   123   theRightDigit = 3
+  //   12    theRightDigit = 2
+  //   1     theRightDigit = 1
+
+  var inputNumber = parseInt(prompt("Enter The relevant Number"));
+  var sum = 0;
+  while (inputNumber > 0) {
+    var theRightDigit = inputNumber % 10;
+    sum = sum + theRightDigit;
+    inputNumber = parseInt(inputNumber / 10);
+  }
+  return sum;
+}
+var result12 = ex12();
+console.log(`The Sum of digits is: ${result12}`);
+
+function ex13() {
+  // 122342
+  //  2
+  //  3
+
+  //   2 === 2  c++
+  //   2 === 4
+  //   2 === 3
+  //   2 === 2  c++
+  //   2 === 2  c++
+  //   2 === 1
+
+  var inputNumber = parseInt(prompt("Enter The relevant Number"));
+  var inputDigit = parseInt(prompt("Enter The tested digit"));
+  var numberOfAppearances = 0;
+}
+var result13 = ex13();
+console.log(`The Sum of digits is: ${result13}`);

@@ -112,3 +112,8 @@ the function will return the recipet with the price
 
 1. exercises 4 - 12
 2. watch JS academic online
+
+
+# 18.1
+1. complete ex 13 in page 25
+2. watch JS academic online
