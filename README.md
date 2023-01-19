@@ -114,7 +114,7 @@ the function will return the recipet with the price
 2. watch JS academic online
 
 
-# 18.1
+# 18.1 - Homework
 1. complete ex 13 in page 25
 2. watch JS academic online
 3. Write a Function which recieve first name & last name and `return` the full name ( use prompt )
