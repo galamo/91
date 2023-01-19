@@ -117,3 +117,38 @@ the function will return the recipet with the price
 # 18.1
 1. complete ex 13 in page 25
 2. watch JS academic online
+3. Write a Function which recieve first name & last name and `return` the full name ( use prompt )
+4. write a function that recieve number of tables & number of guests and `return` the capacity of the resturant
+5. write a function that calculate cart price, the function will recieve
+- number of products = X
+- prompt  X  times Product name + Product Price
+- the function will `print` the final reciept 
+
+Example:
+
+Input:
+
+"Please Enter the number of Products" => 3
+"Please Enter the name of Product 1" => "Milk"
+"Please Enter the Price of Product 1" => 10
+"Please Enter the name of Product 2" => "Potato"
+"Please Enter the Price of Product 2" => 5
+"Please Enter the name of Product 3" => "Bread"
+"Please Enter the Price of Product 3" => 8
+
+Output:
+
+"Number of products - 3 , total amount: 23"
+
+- Advanced: print each product in the output with his price as well
+
+
+# Quiz Subject & Material 
+
+1. DOM manipulation
+2. JS Objects & arrays
+3. Functions
+4. Document.createElement
+5. Loops ( while, for )
+6. CSS
+7. Transitions
