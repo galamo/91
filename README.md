@@ -163,5 +163,7 @@ Output:
 - second input - movies
 - at the end, print the movies
 
+2. Page 29 ex 3 
+
 ## Homework
 
