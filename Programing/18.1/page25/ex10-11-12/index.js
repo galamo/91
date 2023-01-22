@@ -53,24 +53,23 @@ function ex12() {
   }
   return sum;
 }
-var result12 = ex12();
-console.log(`The Sum of digits is: ${result12}`);
+// var result12 = ex12();
+// console.log(`The Sum of digits is: ${result12}`);
 
 function ex13() {
-  // 122342
-  //  2
-  //  3
-
-  //   2 === 2  c++
-  //   2 === 4
-  //   2 === 3
-  //   2 === 2  c++
-  //   2 === 2  c++
-  //   2 === 1
-
   var inputNumber = parseInt(prompt("Enter The relevant Number"));
   var inputDigit = parseInt(prompt("Enter The tested digit"));
   var numberOfAppearances = 0;
+  // while, % , if  , numberOfAppearances
+  while (inputNumber > 0) {
+    var currentTestedNumber = inputNumber % 10;
+
+    if (inputDigit === currentTestedNumber) {
+      numberOfAppearances++;
+    }
+    inputNumber = parseInt(inputNumber / 10);
+  }
+  return numberOfAppearances;
 }
 var result13 = ex13();
-console.log(`The Sum of digits is: ${result13}`);
+console.log(`The numberOfAppearances: ${result13}`);

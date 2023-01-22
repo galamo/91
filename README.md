@@ -152,3 +152,14 @@ Output:
 5. Loops ( while, for )
 6. CSS
 7. Transitions
+
+
+# 22.1
+
+### Arrays
+1. Create a function that receive from a user his favorite movies
+- first input - number of movies
+- second input -  movies 
+- at the end, print the movies 
+
+## Homework
