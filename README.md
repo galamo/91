@@ -113,16 +113,17 @@ the function will return the recipet with the price
 1. exercises 4 - 12
 2. watch JS academic online
 
-
 # 18.1 - Homework
+
 1. complete ex 13 in page 25
 2. watch JS academic online
 3. Write a Function which recieve first name & last name and `return` the full name ( use prompt )
 4. write a function that recieve number of tables & number of guests and `return` the capacity of the resturant
 5. write a function that calculate cart price, the function will recieve
+
 - number of products = X
-- prompt  X  times Product name + Product Price
-- the function will `print` the final reciept 
+- prompt X times Product name + Product Price
+- the function will `print` the final reciept
 
 Example:
 
@@ -142,8 +143,7 @@ Output:
 
 - Advanced: print each product in the output with his price as well
 
-
-# Quiz Subject & Material 
+# Quiz Subject & Material
 
 1. DOM manipulation
 2. JS Objects & arrays
@@ -153,13 +153,15 @@ Output:
 6. CSS
 7. Transitions
 
-
 # 22.1
 
 ### Arrays
+
 1. Create a function that receive from a user his favorite movies
+
 - first input - number of movies
-- second input -  movies 
-- at the end, print the movies 
+- second input - movies
+- at the end, print the movies
 
 ## Homework
+
