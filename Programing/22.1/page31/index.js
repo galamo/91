@@ -16,4 +16,23 @@ function ex_minus1v2() {
   }
   console.log(multipleNum);
 }
-ex_minus1v2();
+// ex_minus1v2();
+
+function ex3() {
+  var maxNumber = 0;
+  for (var index = 0; index < 10; index++) {
+    var currentNumber = parseInt(prompt(`Enter the ${index} Number`));
+    if (currentNumber > maxNumber) {
+      maxNumber = currentNumber;
+    }
+  }
+  console.log(`The max number is: ${maxNumber}`);
+}
+
+ex3();
+
+
+// 
+// var
+// let
+// const 
