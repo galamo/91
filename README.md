@@ -170,5 +170,7 @@ Output:
 
 1. page 29 ex 2
 2. page 29 5 OR 6
+3. Page 31-32 ex 1-13 (include)
 
+- Read:
 3. https://he.wikipedia.org/wiki/%D7%A1%D7%93%D7%A8%D7%AA_%D7%A4%D7%99%D7%91%D7%95%D7%A0%D7%90%D7%A6%27%D7%99
