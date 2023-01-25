@@ -196,3 +196,5 @@ finally print the Cart amount
 `The Cart total price is: ${totalPrice}`
 
 Advanced: Print the products as well!!!
+
+## homework
