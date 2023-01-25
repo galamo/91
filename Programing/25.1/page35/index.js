@@ -50,7 +50,7 @@ function isVeto(v) {
   } else {
     return false;
   }
-  //   return v.toLowerCase() === "veto";
+  //   return v.toLowerCase() === "veto"; // same as the code above
 }
 
 ex4();
