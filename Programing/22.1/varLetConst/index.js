@@ -27,3 +27,5 @@ if (true) {
   let insideIfLet = true;
 }
 //console.log(insideIfLet); // WILL NOT WORK = scope variable
+
+
