@@ -173,4 +173,26 @@ Output:
 3. Page 31-32 ex 1-13 (include)
 
 - Read:
+
 3. https://he.wikipedia.org/wiki/%D7%A1%D7%93%D7%A8%D7%AA_%D7%A4%D7%99%D7%91%D7%95%D7%A0%D7%90%D7%A6%27%D7%99
+
+# 25.1
+
+## Ex Calculate Cart
+
+1. Calculate the Cart amount:
+
+- input number of products ( prompt )
+- input the name of the relevant product ( prompt ) - in loop
+
+apple - 4$
+orange - 3$
+milk - 2$
+bread - 5$
+tomato - 1$
+default - if the product not exist charge with 10$
+
+finally print the Cart amount
+`The Cart total price is: ${totalPrice}`
+
+Advanced: Print the products as well!!!
