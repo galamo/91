@@ -13,6 +13,8 @@ function cartExSolution() {
 
   printTotalCartAmountPrice(totalCartPrice);
   console.log(`Your products are ${cart.join(" ")}`);
+  const discount = 0.9;
+  printTotalCartAmountPrice(totalCartPrice * discount);
 }
 
 function getPriceByProduct(product) {
@@ -36,7 +38,7 @@ function getPriceByProduct(product) {
 }
 
 function printTotalCartAmountPrice(totalPrice) {
-  console.log(`Total cart price is: ${totalPrice}$`);
+  console.log(`Your purchase amount is: ${totalPrice}$`);
 }
 
 cartExSolution();
