@@ -198,3 +198,32 @@ finally print the Cart amount
 Advanced: Print the products as well!!!
 
 ## homework
+
+1. Write a function that find the highest number in array:
+The function recieve array and return the highest number
+use the following array
+```js
+const numbers = [1,2,55,4,6,7787,3,4,5,2,33,4]
+```
+The result should be 7787;
+
+
+2. Write a function that recieve an array of products & product name,
+the function will return the number of times the product exist in the array
+```js
+const numbers = ['oranges', 'grapefruits','grapefruits','mandarins', 'bananas','bananas']
+const relevantFruit = 'grapefruits'
+```
+The result will be 2, grapefruits exist in the array twice
+
+3. Write a function that receive array of prices 
+```js
+const prices = [32,42,22,33,231,44]
+const discount = 0.2
+
+```
+The function will return new array after discount 
+```js
+[25.6, 33.6,17.6,26.40,.....]
+```
+
