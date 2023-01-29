@@ -6,6 +6,7 @@ const car = {
   numOfDoors: 5,
   is4X4: true,
   hp: 190,
+  location: "Tel aviv",
   model: {
     manufacturer: "skoda",
     subModel: "kodiaq",
@@ -26,6 +27,10 @@ const car = {
   horn: function () {
     console.log("Bippppp");
   },
+
+  setLocation: function (location) {
+    this.location = location;
+  },
 };
 
 car.features.push("matrixLight");
@@ -34,3 +39,7 @@ car.startEngine();
 car.drive(20);
 car.drive(30);
 car.drive(1500);
+
+Object.keys(car); // return all the keys in array
+Object.values(car); // return all the values in array
+Object.entries(car); // return all the entries in array [key,value]
