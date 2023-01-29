@@ -13,9 +13,8 @@ function getDiscount(arrayOfPrices, discountJR) {
   return pricesAfterDiscount;
 }
 
-const input = [34, 565, 66, 33];
-const disc = 0.5;
-const result = getDiscount(input, disc);
+const inputArr = [1, 1, 2, 3];
+const result = getDiscount(inputArr, disc);
 
 // function getDiscount(arrayOfPrices, discountJR) {
 //   if (typeof discountJR === "number") {
