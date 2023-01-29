@@ -211,7 +211,7 @@ The result should be 7787;
 2. Write a function that recieve an array of products & product name,
 the function will return the number of times the product exist in the array
 ```js
-const numbers = ['oranges', 'grapefruits','grapefruits','mandarins', 'bananas','bananas']
+const products = ['oranges', 'grapefruits','grapefruits','mandarins', 'bananas','bananas']
 const relevantFruit = 'grapefruits'
 ```
 The result will be 2, grapefruits exist in the array twice
