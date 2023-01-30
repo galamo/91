@@ -227,3 +227,53 @@ The function will return new array after discount
 [25.6, 33.6,17.6,26.40,.....]
 ```
 
+
+# 29.1
+## Homework - MANDATORY 
+
+1. Write a function `getFavoritesMovies` that recieve from customer his favorites movies
+- recieve the number of movies
+```js
+const numOfMovies = prompt("Please Enter Movies");
+```
+- reviece the movies one by one ,
+```js
+const movieName = prompt("Please Enter movie name");
+const movieRating = prompt("Please Enter your rating");
+```
+- movie object will look like ( suggestion only ) 
+```js
+ {movieName:"scream", rating: 4} 
+```
+
+2. continue to ex 1, write another function  `getHighRatingMovies` that recieve an array (movies) and number (rating),  for example:
+
+- first param array of movies:
+```js
+ [{ movieName:"the saw" rating: 5 },{ movieName:"i know what you did last summer" rating: 4 }]
+```
+- second param rating: `4`
+
+- the function will return all the movies ( new array ) with the `rating > 4`
+
+result:
+```js
+ [{ movieName:"the saw" rating: 5 }]
+```
+
+3. Write a function that add new movie to favorites ( use push function )
+4. Write a funciton that remove a movie from the favorites ( recieve the movie name and remove it)
+5. Write a function that modify the rating ( THINK ALONE WHAT SHOULD BE GIVEN HERE)
+
+*** Remember to write validations!
+6. ADVANCED: on movie object, create a behavior that set the rating, `setRating`
+```js
+{ movieName:"i still know what you did last summer", rating: 4, setRating:function(newRating){
+   // validate that rating is between 1-5
+   // if not => return stop the funciton and dont set the new rating
+   // otherwise set the new rating to be the new rating
+   // remember to use this.rating........... 
+} }
+
+```
+
