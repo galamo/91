@@ -45,14 +45,30 @@ function addStudent() {
   const ulStudents = document.getElementById("studentsList"); //ul
   const studentInput = document.getElementById("studentName"); // input
   const studentName = studentInput.value;
+  //   create li
   const newLi = document.createElement("li");
+  //   adding bootstap class to li
   newLi.classList.add("list-group-item");
+  //    create button
   const newButton = document.createElement("button");
+  const spanBadge = document.createElement("span");
+  //   adding bootstap class to button
   newButton.classList.add("btn", "btn-primary");
+  spanBadge.classList.add("badge", "bg-secondary");
+
+  //   adding text to the button
   newButton.innerText = studentName;
-  newLi.append(newButton);
+  spanBadge.innerText = Math.ceil(Math.random() * 999);
+  //   appending the button into newLi
+  newLi.append(newButton, spanBadge);
+  //   appending the newLi into ulStudents
   ulStudents.append(newLi);
   studentInput.value = "";
 }
 
 init();
+
+// getElement*By*
+// createElement
+// append
+// remove
