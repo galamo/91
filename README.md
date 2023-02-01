@@ -200,80 +200,102 @@ Advanced: Print the products as well!!!
 ## homework
 
 1. Write a function that find the highest number in array:
-The function recieve array and return the highest number
-use the following array
+   The function recieve array and return the highest number
+   use the following array
+
 ```js
-const numbers = [1,2,55,4,6,7787,3,4,5,2,33,4]
+const numbers = [1, 2, 55, 4, 6, 7787, 3, 4, 5, 2, 33, 4];
 ```
+
 The result should be 7787;
 
-
 2. Write a function that recieve an array of products & product name,
-the function will return the number of times the product exist in the array
+   the function will return the number of times the product exist in the array
+
 ```js
-const products = ['oranges', 'grapefruits','grapefruits','mandarins', 'bananas','bananas']
-const relevantFruit = 'grapefruits'
+const products = [
+  "oranges",
+  "grapefruits",
+  "grapefruits",
+  "mandarins",
+  "bananas",
+  "bananas",
+];
+const relevantFruit = "grapefruits";
 ```
+
 The result will be 2, grapefruits exist in the array twice
 
-3. Write a function that receive array of prices 
-```js
-const prices = [32,42,22,33,231,44]
-const discount = 0.2
+3. Write a function that receive array of prices
 
+```js
+const prices = [32, 42, 22, 33, 231, 44];
+const discount = 0.2;
 ```
-The function will return new array after discount 
+
+The function will return new array after discount
+
 ```js
 [25.6, 33.6,17.6,26.40,.....]
 ```
 
-
 # 29.1
-## Homework - MANDATORY 
+
+## Homework - MANDATORY
 
 1. Write a function `getFavoritesMovies` that recieve from customer his favorites movies
+
 - recieve the number of movies
+
 ```js
 const numOfMovies = prompt("Please Enter Movies");
 ```
+
 - reviece the movies one by one ,
+
 ```js
 const movieName = prompt("Please Enter movie name");
 const movieRating = prompt("Please Enter your rating");
 ```
-- movie object will look like ( suggestion only ) 
+
+- movie object will look like ( suggestion only )
+
 ```js
- {movieName:"scream", rating: 4} 
+ {movieName:"scream", rating: 4}
 ```
 
-2. continue to ex 1, write another function  `getHighRatingMovies` that recieve an array (movies) and number (rating),  for example:
+2. continue to ex 1, write another function `getHighRatingMovies` that recieve an array (movies) and number (rating), for example:
 
 - first param array of movies:
+
 ```js
  [{ movieName:"the saw" rating: 5 },{ movieName:"i know what you did last summer" rating: 4 }]
 ```
+
 - second param rating: `4`
 
 - the function will return all the movies ( new array ) with the `rating > 4`
 
 result:
+
 ```js
  [{ movieName:"the saw" rating: 5 }]
 ```
 
 3. Write a function that add new movie to favorites ( use push function )
-4. Write a funciton that remove a movie from the favorites ( recieve the movie name and remove it)
+4. Write a function that remove a movie from the favorites ( recieve the movie name and remove it)
 5. Write a function that modify the rating ( THINK ALONE WHAT SHOULD BE GIVEN HERE)
 
-*** Remember to write validations!
+\*\*\* Remember to write validations! 
+
 6. ADVANCED: on movie object, create a behavior that set the rating, `setRating`
+
 ```js
 { movieName:"i still know what you did last summer", rating: 4, setRating:function(newRating){
    // validate that rating is between 1-5
    // if not => return stop the funciton and dont set the new rating
    // otherwise set the new rating to be the new rating
-   // remember to use this.rating........... 
+   // remember to use this.rating...........
 } }
 
 ```
-

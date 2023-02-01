@@ -1,4 +1,3 @@
-// ex1 start
 function loadFavoritesMovies() {
   const favoritesMoviesLocal = [];
   const numOfMovies = parseInt(prompt("Please Enter Movies"));
@@ -8,10 +7,7 @@ function loadFavoritesMovies() {
   return favoritesMoviesLocal;
 }
 const globalFavorites = loadFavoritesMovies();
-// ex1 ends
-// ex2 start
-// this is not a sort! this is not i dont want the higher rating!
-// i want a FILTER!
+
 function getHighRatingMovies(arrayOfMovies, minRating) {
   if (typeof minRating !== "number") return;
   if (Array.isArray(arrayOfMovies) === false) return;
@@ -25,7 +21,6 @@ function getHighRatingMovies(arrayOfMovies, minRating) {
   return highRatingMovies;
 }
 const minRating = parseInt(prompt("give me minRating or ill shoot you!"));
-// connect this part to the DOM  coming soon at 19:32 dont miss!
 const result = getHighRatingMovies(globalFavorites, minRating);
 console.log("after min rating filter", result);
 function addNewMovie(favoritesMoviesLocal) {
@@ -34,10 +29,15 @@ function addNewMovie(favoritesMoviesLocal) {
   const currentMovie = {
     movieName: movieName,
     rating: movieRating,
+    setRating: function (newRating) {
+      if (typeof newRating !== "number") return;
+      if (newRating >= 1 && newRating <= 5) {
+        this.rating = newRating;
+      }
+    },
   };
   favoritesMoviesLocal.push(currentMovie);
 }
-// ex2 ends
 
 function deleteMovie(arrayOfMovies, movieNameToDelete) {
   if (typeof movieNameToDelete !== "string") return;
@@ -52,5 +52,3 @@ function deleteMovie(arrayOfMovies, movieNameToDelete) {
     }
   }
 }
-
-// splice??!
