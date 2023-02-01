@@ -1,0 +1,18 @@
+.redMe {
+  cursor: pointer;
+  color: red;
+}
+
+.blueMe {
+  cursor: pointer;
+  color: blue;
+}
+
+.hiddenText {
+  width: 50px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

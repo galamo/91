@@ -299,3 +299,12 @@ result:
 } }
 
 ```
+
+
+
+
+# 1.2 
+### ex1
+1. use the current script for `add new user`
+2. when clicking on  `add new user`   add a badge element next to the name ( inside the LI)
+3. <span class="badge bg-secondary">New</span>
