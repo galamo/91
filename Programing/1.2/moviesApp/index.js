@@ -8,7 +8,6 @@ function addMovie() {
   const mnValue = movieName.value;
   const mrValue = parseInt(movieRating.value);
   const newMovieListItem = document.createElement("li");
-  newMovieListItem.classList.add("list-group-item", "movie-item");
   const spanBadge = document.createElement("span");
   spanBadge.classList.add("badge", "bg-secondary");
   spanBadge.innerText = mnValue;
@@ -25,7 +24,24 @@ function addMovie() {
   const deleteButton = getDeleteButton(movieId);
   newMovieListItem.append(spanBadge, div, deleteButton);
   newMovieListItem.id = movieId;
+  newMovieListItem.classList.add("list-group-item", "movie-item");
+
+  newMovieListItem.onclick = function () {
+    // this=> newMovieListItem
+    clearAllListItems(movieId); //movieId of the clicked element
+    this.classList.toggle("colorMeInPink");
+  };
+
   document.getElementById("content").append(newMovieListItem);
+}
+
+function clearAllListItems(mid) {
+  const allListItems = document.getElementsByClassName("list-group-item");
+  for (let index = 0; index < allListItems.length; index++) {
+    if (allListItems[index].id !== mid) {
+      allListItems[index].classList.remove("colorMeInPink");
+    }
+  }
 }
 
 function getDeleteButton(id) {
