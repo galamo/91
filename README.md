@@ -311,3 +311,7 @@ result:
 
 ## Homework
 1. Go over the last lesson especially MoviesApp 
+
+
+# 5.2 
+1. use Icons https://icons.getbootstrap.com/#install
