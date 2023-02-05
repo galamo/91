@@ -286,7 +286,7 @@ result:
 4. Write a function that remove a movie from the favorites ( recieve the movie name and remove it)
 5. Write a function that modify the rating ( THINK ALONE WHAT SHOULD BE GIVEN HERE)
 
-\*\*\* Remember to write validations! 
+\*\*\* Remember to write validations!
 
 6. ADVANCED: on movie object, create a behavior that set the rating, `setRating`
 
@@ -300,18 +300,24 @@ result:
 
 ```
 
+# 1.2
 
-
-
-# 1.2 
 ### ex1
+
 1. use the current script for `add new user`
-2. when clicking on  `add new user`   add a badge element next to the name ( inside the LI)
+2. when clicking on `add new user` add a badge element next to the name ( inside the LI)
 3. <span class="badge bg-secondary">New</span>
 
 ## Homework
-1. Go over the last lesson especially MoviesApp 
 
+1. Go over the last lesson especially MoviesApp
 
-# 5.2 
+# 5.2
+
 1. use Icons https://icons.getbootstrap.com/#install
+
+## Ex 1
+
+- on clicking list item movie - the list item background should be yellow
+- on clicking list item movie again, the list item background should be white
+- support only one selected item
