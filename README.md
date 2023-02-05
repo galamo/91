@@ -321,3 +321,11 @@ result:
 - on clicking list item movie - the list item background should be yellow
 - on clicking list item movie again, the list item background should be white
 - support only one selected item
+
+### Homework
+
+1. Complete the class properties
+2. Clicking on order will create new Order in the UI
+3. Clicking again on order will create another Order in the UI
+4. Clear the form
+5. Add button to delete the Order
