@@ -4,6 +4,8 @@ const DOM = {
   //   allergins: null,
 };
 
+let orders = [];
+
 function init() {
   DOM.emailInput = document.querySelector("#orderEmail");
   DOM.numberOfSeats = document.querySelector("#numberOfSeats");
@@ -18,6 +20,7 @@ function init() {
 
     console.log(DOM.emailInput.value);
     console.log(DOM.numberOfSeats.value);
+    orders.push(new Order(DOM.emailInput.value, DOM.numberOfSeats.value));
   }
 }
 console.log("Index is loaded!");
