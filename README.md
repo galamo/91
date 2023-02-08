@@ -324,7 +324,7 @@ result:
 
 ### Homework
 
-1. Complete the class properties
+1. Complete the class properties ( function constructor )
 2. Clicking on order will create new Order in the UI
 3. Clicking again on order will create another Order in the UI
 4. Clear the form
