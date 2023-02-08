@@ -329,3 +329,10 @@ result:
 3. Clicking again on order will create another Order in the UI
 4. Clear the form
 5. Add button to delete the Order
+
+
+# 8.2
+### Homework
+1. Complete the table
+2. Ellergies should be icons ( eggs, milk, peanuts)
+3. Advanced - Edit order ( click on edit - pencil next to the delete, )
