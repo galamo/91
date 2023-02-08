@@ -18,3 +18,5 @@ function Order(
   this.time = time;
   this.outside = outside;
 }
+
+console.log("Order is loaded!");

@@ -10,6 +10,11 @@ function init() {
     true
   );
   console.log(order);
-}
 
+  //  making onclick="addNNewOrder()" from JS:
+  //   const addNewOrderButton = document.getElementById("addNewOrderButton");
+  const addNewOrderButton = document.querySelector("#addNewOrderButton");
+  console.log(addNewOrderButton);
+}
+console.log("Index is loaded!");
 init();
