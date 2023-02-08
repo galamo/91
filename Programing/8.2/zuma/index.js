@@ -1,20 +1,24 @@
-function init() {
-  const order = new Order(
-    "galamouyal88@gmail.com",
-    5,
-    2542546246,
-    ["peanuts"],
-    "i would like to seat next to Tobi from Tuba-Zangaria",
-    new Date().toString(),
-    new Date().toString(),
-    true
-  );
-  console.log(order);
+const DOM = {
+  emailInput: null,
+  numberOfSeats: null,
+  //   allergins: null,
+};
 
-  //  making onclick="addNNewOrder()" from JS:
+function init() {
+  DOM.emailInput = document.querySelector("#orderEmail");
+  DOM.numberOfSeats = document.querySelector("#numberOfSeats");
+  //   making onclick="addNNewOrder()" from JS:
   //   const addNewOrderButton = document.getElementById("addNewOrderButton");
   const addNewOrderButton = document.querySelector("#addNewOrderButton");
-  console.log(addNewOrderButton);
+  addNewOrderButton.addEventListener("click", addNewOrderFn);
+
+  function addNewOrderFn(event) {
+    // console.log(event); // event
+    // console.log(this); // button!
+
+    console.log(DOM.emailInput.value);
+    console.log(DOM.numberOfSeats.value);
+  }
 }
 console.log("Index is loaded!");
 init();
