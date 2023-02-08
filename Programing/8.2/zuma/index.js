@@ -21,11 +21,7 @@ function init() {
   function addNewOrderFn(event) {
     // console.log(event); // event
     // console.log(this); // button!
-
-    console.log(DOM.emailInput.value);
-    console.log(DOM.numberOfSeats.value);
     orders.push(new Order(DOM.emailInput.value, DOM.numberOfSeats.value));
-
     draw(orders);
     clearForm();
   }
@@ -54,8 +50,7 @@ function draw(ordersArray) {
     const tdEmail = document.createElement("td");
     tdEmail.innerText = currentOrder.email;
     // create numberOfSeats column
-    const tdNumberOfSeats = document.createElement("td");
-    tdNumberOfSeats.innerText = currentOrder.numberOfSeats;
+    const tdNumberOfSeats = getNumberOfSeatsTD(currentOrder.numberOfSeats);
     // create Button column
     const tdActions = document.createElement("td");
     const buttonDelete = document.createElement("button");
@@ -67,8 +62,19 @@ function draw(ordersArray) {
       draw(orders);
     });
 
-    tableRow.append(tdOrderId, tdEmail, tdNumberOfSeats, tdActions);
-    DOM.ordersTableBody.append(tableRow);
+    tableRow.append(tdOrderId, tdEmail, tdNumberOfSeats, tdActions); // tr>td,td,td,td
+    DOM.ordersTableBody.append(tableRow); //table > tbody > tr
+  }
+  function getNumberOfSeatsTD(numberOfSeats) {
+    if (typeof numberOfSeats !== "number") return;
+    const numberOfSeatsTd = document.createElement("td");
+    for (let index = 0; index < numberOfSeats; index++) {
+      const person = document.createElement("i");
+      person.className = "bi-person";
+      numberOfSeatsTd.append(person);
+    }
+    numberOfSeatsTd.append(`(${numberOfSeats})`);
+    return numberOfSeatsTd;
   }
 }
 init();
