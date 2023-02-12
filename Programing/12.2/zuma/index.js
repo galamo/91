@@ -141,7 +141,7 @@ const theIndex2023 = [30, 28, 22, 25, 21, 27, 26].findIndex(function (c, i) {
   return c === 21;
 });
 
-const theElement2023 = [30, 28, 22, 25, 21, 27, 26].findIndex(function (c, i) {
+const theElement2023 = [30, 28, 22, 25, 21, 27, 26].find(function (c, i) {
   return c === 21;
 });
 console.log(filteredAges2023);
