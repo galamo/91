@@ -1,0 +1,10 @@
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"); */
+.movie-item {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.colorMeInPink {
+  background-color: pink !important;
+  border: 3px solid green !important;
+}

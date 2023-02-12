@@ -35,12 +35,15 @@ function init() {
 }
 function filterOrdersFn(filterValue) {
   if (!filterValue) return draw(orders);
-  let filteredOrders = [];
-  for (let index = 0; index < orders.length; index++) {
-    if (orders[index].email.includes(filterValue)) {
-      filteredOrders.push(orders[index]);
-    }
-  }
+  const filteredOrders = orders.filter(function (currentOrder) {
+    return currentOrder.email.includes(filterValue);
+  });
+  //   let filteredOrders = [];
+  //   for (let index = 0; index < orders.length; index++) {
+  //     if (orders[index].email.includes(filterValue)) {
+  //       filteredOrders.push(orders[index]);
+  //     }
+  //   }
   draw(filteredOrders);
 }
 function clearForm() {
@@ -75,12 +78,16 @@ function draw(ordersArray) {
     buttonDelete.innerText = "X";
     tdActions.append(buttonDelete);
     buttonDelete.addEventListener("click", function () {
-      const idToDelete = currentOrder.orderNumber;
-      for (let index = 0; index < orders.length; index++) {
-        if (orders[index].orderNumber === idToDelete) {
-          orders.splice(index, 1);
-        }
-      }
+      const indexToDelete = orders.findIndex(function (co) {
+        return currentOrder.orderNumber === co.orderNumber;
+      });
+      orders.splice(indexToDelete, 1);
+      //   const idToDelete = currentOrder.orderNumber;
+      //   for (let index = 0; index < orders.length; index++) {
+      //     if (orders[index].orderNumber === idToDelete) {
+      //       orders.splice(index, 1);
+      //     }
+      //   }
       filterOrdersFn(DOM.filter.value);
     });
 
@@ -100,3 +107,41 @@ function draw(ordersArray) {
   }
 }
 init();
+
+// Filter explanation
+const ages = [30, 28, 22, 25, 21, 27, 26]; // v
+const age = 25; // v
+let filteredAges = []; // v
+for (let index = 0; index < ages.length; index++) {
+  // v
+  const currentElement = ages[index]; // v
+  if (currentElement > age) {
+    // ?
+    filteredAges.push(currentElement);
+  }
+}
+// filter , map, reduce, find, findIndex , some
+const filteredAges2023 = ages.filter(function (
+  currentElement,
+  index,
+  allArray
+) {
+  return currentElement > age; // true
+  // currentElement = 22 use 99%
+  // index = 2 using 50 %
+  // allArray = filteredAges2023 90 % not in use
+});
+// same code simple - and with higher standartizations
+const filteredAges2023v2 = [30, 28, 22, 25, 21, 27, 26].filter(function (c, i) {
+  console.log(i, c);
+  return c > age;
+});
+
+const theIndex2023 = [30, 28, 22, 25, 21, 27, 26].findIndex(function (c, i) {
+  return c === 21;
+});
+
+const theElement2023 = [30, 28, 22, 25, 21, 27, 26].findIndex(function (c, i) {
+  return c === 21;
+});
+console.log(filteredAges2023);
