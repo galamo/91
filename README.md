@@ -350,4 +350,4 @@ result:
 - Edit Course
 - Filter Course
 
-Course object: { name:"js" , price: "123$" , startDate: "DATE" , endDate:"DATE", lecture: "Rafi-Pafi" , }
+Course object: { name:"js" , price: "123$" , startDate: "DATE" , endDate:"DATE", lecture: "Rafi-Pafi" }
