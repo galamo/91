@@ -5,7 +5,7 @@ const DOM = {
   filter: null,
 };
 
-let orders = [];
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
 function init() {
   DOM.emailInput = document.querySelector("#orderEmail");
@@ -29,9 +29,12 @@ function init() {
     // console.log(event); // event
     // console.log(this); // button!
     orders.push(new Order(DOM.emailInput.value, DOM.numberOfSeats.value));
+    localStorage.setItem("orders", JSON.stringify(orders));
     draw(orders);
     clearForm();
   }
+
+  draw(orders);
 }
 function filterOrdersFn(filterValue) {
   if (!filterValue) return draw(orders);
@@ -82,6 +85,7 @@ function draw(ordersArray) {
         return currentOrder.orderNumber === co.orderNumber;
       });
       orders.splice(indexToDelete, 1);
+      localStorage.setItem("orders", JSON.stringify(orders));
       //   const idToDelete = currentOrder.orderNumber;
       //   for (let index = 0; index < orders.length; index++) {
       //     if (orders[index].orderNumber === idToDelete) {

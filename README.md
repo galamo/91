@@ -337,3 +337,17 @@ result:
 1. Complete the table
 2. Ellergies should be icons ( eggs, milk, peanuts)
 3. Advanced - Edit order ( click on edit - pencil next to the delete)
+
+# 12.2
+
+### Homework
+
+1. support clear functionality in local storage
+2. Create A web page that support Courses management
+
+- Add Course
+- Delete Course
+- Edit Course
+- Filter Course
+
+Course object: { name:"js" , price: "123$" , startDate: "DATE" , endDate:"DATE", lecture: "Rafi-Pafi" , }
