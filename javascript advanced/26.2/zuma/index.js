@@ -210,6 +210,10 @@ function getEditableRow(currentOrder) {
     const currentRow = document.querySelector(`#${currentOrder.orderNumber}`);
     const newEmail = currentRow.querySelector("#email").value;
     currentOrder.email = newEmail;
+
+    const newNumberOfSeats = currentRow.querySelector("#nos").value;
+    currentOrder.numberOfSeats = +newNumberOfSeats;
+
     currentOrder.isInEditMode = false;
     draw(orders);
   });
@@ -237,6 +241,7 @@ function getEditableRow(currentOrder) {
       }
       selectElement.append(currentOption);
     }
+    selectElement.id = "nos";
     numberOfSeatsTd.append(selectElement);
     return numberOfSeatsTd;
   }
