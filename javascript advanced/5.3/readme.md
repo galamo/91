@@ -13,3 +13,5 @@ Results:
 userCopy
 (3) ['maiCohen-PC', 'Rafi-G', 'Noy-B'] -->
 
+- Complex objects.
+1. Implement getCountryBy  name Or alpha3code 
