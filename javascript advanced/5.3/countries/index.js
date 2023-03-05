@@ -1,12 +1,17 @@
 console.log(countries);
 
 function getCountryByName(countryName) {
-  const countryIndex = countries.findIndex((currentCountry) => {
+  return countries.find((currentCountry) => {
     return (
       currentCountry?.name.common?.toLowerCase() === countryName.toLowerCase()
     );
   });
-  return countryIndex;
+}
+
+function getCountryByCode(countryName) {
+  return countries.find((currentCountry) => {
+    return currentCountry?.cca3?.toLowerCase() === countryName.toLowerCase();
+  });
 }
 
 const index = getCountryByName("zmb");
@@ -14,5 +19,17 @@ console.log(countries[index]);
 
 // country code OR by name
 function getCountryByField(countryValue, field) {
-    
+  switch (field) {
+    case "code": {
+      return getCountryByCode(countryValue);
+    }
+    case "name": {
+      return getCountryByName(countryValue);
+    }
+    default: {
+      throw new Error("No field!");
+    }
+  }
 }
+
+console.log(getCountryByField("israel", "name"));
