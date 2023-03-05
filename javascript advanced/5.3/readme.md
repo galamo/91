@@ -6,3 +6,10 @@
 4. call the function again with copy of the global array ( using the copy )
 5. what are the result ? how much users in arrayOfusers ? 
 
+Results:
+
+<!-- users
+(2) ['maiCohen-PC', 'Rafi-G']
+userCopy
+(3) ['maiCohen-PC', 'Rafi-G', 'Noy-B'] -->
+

@@ -62,6 +62,17 @@ console.log(isTomerFullStackObjCopy)
 
 
 
+function addNewUser(arrayOfusers,newUser){
+    arrayOfusers.push(newUser)
+} 
+
+const users = [];
+addNewUser(users,"maiCohen-PC")
+addNewUser(users,"Rafi-G")
+const userCopy = [...users]
+addNewUser(userCopy,"Noy-B")
+
+
 
 
 
