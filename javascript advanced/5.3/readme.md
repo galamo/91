@@ -22,7 +22,7 @@ userCopy
 # Homework
 
 1. implements search by border, input: countryCode, output: all countries that border with the input `function getBorderByCountries(borderCountryCode)`
-2. implements function that gets the currencies 
+2. implements function that gets the currencies according the country name
 3. implement function that return all the countries according the currency sent, if the currency is used in the country return the country code / name
 4. `function getCountriesByStartofWeek(sow)` - get all countries that startring the week at `sow`
 5. `function getCountriesAbovethePopulation(populationNumber)`  get all the countries that has higher amount than populationNumber
