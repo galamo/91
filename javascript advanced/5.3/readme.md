@@ -1,6 +1,10 @@
 # JS Advanced
 
-- Ref vs Value
+Javascript Objects
+Copy objects in javascript ( shallow copy )
+Higher order functions - find, findIndex, filter, map etc..
+Javascript reference vs value
+Passing objects in javascript by reference
 
 1. `function addNewUser(arrayOfusers,newUser)`
 2. implement the function in section 1 ( the function will push newUser:string to the array)
@@ -25,4 +29,4 @@ userCopy
 2. implements function that gets the currencies according the country name
 3. implement function that return all the countries according the currency sent, if the currency is used in the country return the country code / name
 4. `function getCountriesByStartofWeek(sow)` - get all countries that startring the week at `sow`
-5. `function getCountriesAbovethePopulation(populationNumber)`  get all the countries that has higher amount than populationNumber
+5. `function getCountriesAbovethePopulation(populationNumber)` get all the countries that has higher amount than populationNumber
