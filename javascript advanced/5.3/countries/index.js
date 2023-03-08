@@ -1,4 +1,4 @@
-console.log(countries);
+// console.log(countries);
 
 function getCountryByName(countryName) {
   return countries.find((currentCountry) => {
@@ -32,4 +32,4 @@ function getCountryByField(countryValue, field) {
   }
 }
 
-console.log(getCountryByField("israel", "name"));
+// console.log(getCountryByField("israel", "name"));
