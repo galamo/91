@@ -1,4 +1,4 @@
-# Ex 1.
+# Ex 1 ( 10 min duration )
 
 1. When selecting a user, print all the user borders
 2. user have a country, and each country have borders
