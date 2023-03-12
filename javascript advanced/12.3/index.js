@@ -37,6 +37,15 @@ function drawPicture(email) {
   });
   if (!findTheUser) return;
   const findTheFlag = countries.find((c) => c.cca2 === findTheUser.nat);
+  console.log(findTheFlag.borders);
+
+  const bordersToShow = [];
+  for (let index = 0; index < findTheFlag.borders.length; index++) {
+    bordersToShow.push(getCountryByCode(findTheFlag.borders[index]));
+  }
+
+  drawBorders(bordersToShow);
+
   if (findTheFlag) {
     drawFlag(findTheFlag?.flags?.svg, findTheFlag.name.common);
     document.querySelector("#countriesSelect").value = findTheFlag?.flags?.svg;
@@ -47,9 +56,23 @@ function drawPicture(email) {
   document.querySelector("#userPicture").innerHTML = "";
   document.querySelector("#userPicture").append(img);
 }
-function drawFlag(linkSrc, cn = "") {
+function drawFlag(linkSrc, cn = "", containerId = "flag", clear = true) {
   const img = getImg(linkSrc);
-  document.querySelector("#flag").innerHTML = "";
-  document.querySelector("#flag").append(img);
-  document.querySelector("#flag").append(cn);
+  if (clear) {
+    document.querySelector(`#${containerId}`).innerHTML = "";
+  }
+  document.querySelector(`#${containerId}`).append(img);
+}
+
+function drawBorders(borders) {
+  document.querySelector(`#borders`).innerHTML = "";
+  for (let j = 0; j < borders.length; j++) {
+    const img = getImg(borders[j]?.flags?.svg);
+    document.querySelector(`#borders`).append(img);
+  }
+}
+
+function getCountryByCode(code) {
+  const currentCountry = countries.find((c) => c.cca3 === code);
+  return currentCountry;
 }
