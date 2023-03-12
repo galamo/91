@@ -32,7 +32,9 @@ function drawUsersSelect() {
   drawPicture(select.value);
 }
 function drawPicture(email) {
-  const findTheUser = users.find((user) => user.email === email);
+  const findTheUser = users.find(function (user) {
+    return user.email === email;
+  });
   if (!findTheUser) return;
   const findTheFlag = countries.find((c) => c.cca2 === findTheUser.nat);
   if (findTheFlag) {
