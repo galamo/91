@@ -3,7 +3,17 @@ function init() {
   drawCarsSelect();
 }
 
-init();
+window.addEventListener("load", function (event) {
+  init();
+  document.querySelector("#flag").addEventListener("click", function (event) {
+    console.log("clicked flag");
+    event.stopPropagation();
+  });
+});
+
+window.addEventListener("click", function () {
+  console.log("clicked window");
+});
 
 function drawCountriesSelect() {
   const onlyCountriesNames = countries.map((currentCountry) => {
@@ -38,6 +48,3 @@ function drawFlag(linkSrc) {
   document.querySelector("#flag").innerHTML = "";
   document.querySelector("#flag").append(img);
 }
-
-
-
