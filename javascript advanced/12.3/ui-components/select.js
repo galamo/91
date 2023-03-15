@@ -12,4 +12,3 @@ function getSelect(optionsArray, handler) {
   select.append(...options);
   return select;
 }
-
