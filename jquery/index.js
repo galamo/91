@@ -21,3 +21,24 @@ $(function () {
     $(".content").fadeToggle();
   });
 });
+
+function getImg(src, width = 400) {
+  const height = 200;
+  const img = $("<img/>").attr({ width, height, src: src });
+  return img;
+}
+
+const user = { name: "Avi", lastName: "Pessah", height: "1.83" };
+// function userFn(a = מאפיין, b = ערך) {
+function userFn(a, b) {
+  if (typeof a === "string") {
+    if (typeof b === "string") {
+      user[a] = b;
+    } else {
+      return user[a];
+    }
+  }
+  if (Array.isArray(a)) {
+    
+  }
+}

@@ -6,3 +6,10 @@ function getImg(src, width = 400) {
   img.style.border = "1px solid black";
   return img;
 }
+
+// jquery way
+function getImg(src, width = 400) {
+  const height = 200;
+  const img = $("<img/>").attr({ width, height, src: src });
+  return img;
+}
