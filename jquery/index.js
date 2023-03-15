@@ -28,7 +28,7 @@ function getImg(src, width = 400) {
   return img;
 }
 
-const user = { name: "Avi", lastName: "Pessah", height: "1.83" };
+let user = { name: "Avi", lastName: "Pessah", height: "1.83" };
 
 // function userFn(a = מאפיין, b = ערך) {
 // 1 - sending only one parameter string -> get the value (getter)
@@ -50,7 +50,15 @@ function userFn(a, b) {
     });
   }
   if (typeof a === "object") {
-    // implementaiton multiple setter
+    // user = { ...user, ...a }; -> simple way
+    Object.entries(a).map((arr) => {
+      // arr[0] key
+      // arr[1] value
+      user[arr[0]] = arr[1];
+    });
   }
 }
-userFn(["name", "height", "lastName"]);
+// userFn(["name", "height", "lastName"]);
+// userFn({ name:  "Tomer", lastName: "Rozental" });
+// user?  { name: "Tomer", lastName: "Rozental", height: "1.83" };
+// Object.keys || Object.values || Object.entries
