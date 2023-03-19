@@ -17,3 +17,9 @@ async function getCountries() {
 
 getCountries();
 ```
+
+# Fetch ( ajax ) excercise 
+1. Use the following api: "https://pokeapi.co/api/v2/pokemon/{name}"
+2. replace the countries api with pokemon api
+3. draw the result from the api according our template
+
