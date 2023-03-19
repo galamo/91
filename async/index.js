@@ -1,7 +1,7 @@
 let numberOfIntervalTimes = 0;
 function order() {
   setTimeout(() => {
-    console.log("The meal is ready");
+    console.log("The meal is ready"); //3 
   }, 3000);
 
   const intervalId = setInterval(() => {
@@ -13,9 +13,9 @@ function order() {
   }, 750);
 }
 
-console.log("Script start");
+console.log("Script start"); //1
 order();
-console.log("Script End");
+console.log("Script End"); //2
 
 // call stack, callback queue,webApi & event loop
 // http://latentflip.com/loupe/?code=ZnVuY3Rpb24gbWFpbigpewogICAgbWV0aG9kQSgpCn0KZnVuY3Rpb24gbWV0aG9kQSgpewogICAgbWV0aG9kQigpCn0KZnVuY3Rpb24gbWV0aG9kQigpewogICAgbWV0aG9kQygpCn0KZnVuY3Rpb24gbWV0aG9kQygpewogICAgc2V0VGltZW91dChmdW5jdGlvbigpewogICAgICAgIGNvbnNvbGUubG9nKCJIaSIpCiAgICB9LDMwMDApCn0KbWFpbigpCgo%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
