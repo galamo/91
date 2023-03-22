@@ -2,6 +2,7 @@ const DOM = {
   content: document.querySelector("#content"),
   controllers: document.querySelector("#controllers"),
 };
+const DEFAULT_NUMBER_OF_PRODUCTS = 5;
 
 function init() {
   const limitsOptionsArray = [
@@ -13,7 +14,10 @@ function init() {
   const selectOption = getSelect(limitsOptionsArray, (value) => {
     getProductsHandler(value);
   });
-  DOM.controllers.append(selectOption);
+
+  DOM.controllers.append(selectOption, selectOption2);
+  const defaultValue = limitsOptionsArray.find((item) => item.selected);
+  getProductsHandler(defaultValue?.value || DEFAULT_NUMBER_OF_PRODUCTS);
 }
 init();
 async function getProductsHandler(limit) {
@@ -45,12 +49,16 @@ function draw(result) {
   }
 }
 function drawProduct(product) {
+  const div = document.createElement("div");
   const img = getImg(product?.thumbnail);
   const h2 = document.createElement("h2");
   h2.innerText = `${product?.price} $`;
   const h1 = document.createElement("h1");
   h1.innerText = product.title;
-  DOM.content.append(h1, h2, img);
+
+  div.classList.add("cardi");
+  div.append(h1, h2, img);
+  DOM.content.append(div);
 }
 
 async function getProducts(limit = 10) {
