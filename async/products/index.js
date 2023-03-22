@@ -15,7 +15,7 @@ function init() {
     getProductsHandler(value);
   });
 
-  DOM.controllers.append(selectOption, selectOption2);
+  DOM.controllers.append(selectOption);
   const defaultValue = limitsOptionsArray.find((item) => item.selected);
   getProductsHandler(defaultValue?.value || DEFAULT_NUMBER_OF_PRODUCTS);
 }
