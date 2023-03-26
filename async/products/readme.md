@@ -30,3 +30,4 @@ changed > skip = 0 current state>limit 5
 
 1. Create Form - `Create new car`
 2. Clicking the button - `create new car` will send a POST request with the relevant payload
+3. Print a message on success or failure
