@@ -1,6 +1,7 @@
 const DOM = {
   content: document.querySelector("#content"),
   controllers: document.querySelector("#controllers"),
+  createProductButton: document.querySelector("#createProduct"),
 };
 const DEFAULT_NUMBER_OF_PRODUCTS = 5;
 
@@ -44,8 +45,17 @@ function init() {
     skip = skip + limit;
     getProductsHandler(limit, skip);
   });
-
   DOM.controllers.append(prevButton, nextButton);
+
+  DOM.createProductButton.addEventListener("click", function () {
+    const formCreateProduct = document.querySelector("#createProductForm");
+    const newProduct = {
+      productName: formCreateProduct["productName"].value,
+      price: formCreateProduct["price"].value,
+      category: formCreateProduct["category"].value,
+    };
+    addNewProductHandler(newProduct);
+  });
 }
 init();
 async function getProductsHandler(limit, skip) {
@@ -64,6 +74,24 @@ async function getProductsHandler(limit, skip) {
     });
   } finally {
     removeLoader();
+  }
+}
+
+async function addNewProductHandler(product) {
+  try {
+    const result = await addProduct(product);
+    swal({
+      title: "Product created!",
+      text: result.success,
+      icon: "success",
+    });
+  } catch (error) {
+    swal({
+      title: "Something went wrong!",
+      text: "Contact admin",
+      icon: "error",
+    });
+  } finally {
   }
 }
 
@@ -89,7 +117,18 @@ function drawProduct(product) {
   div.append(h1, h2, img);
   DOM.content.append(div);
 }
-
+async function addProduct(product) {
+  const result = await fetch(`https://reqbin.com/echo/post/json`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(product),
+  });
+  const json = await result.json();
+  return json;
+}
 async function getProducts(limit = 10, skip = 0) {
   const result = await fetch(
     `https://dummyjson.com/products?limit=${limit}&skip=${skip}`

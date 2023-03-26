@@ -25,16 +25,17 @@ async function test() {
 }
 test();
 
-// POST -Create movie
-const data1 = `{
-  movieId: "movieId",
-  length: "120",
-  title: "Rafi is annoying",
-  type: "Horror",
-  rentalPrice: "10$",
-  year: 2023,
-}`;
-const response = await fetch("https://movies.admin/create", {
-  method: "POST",
-  body: data1,
-});
+// // POST Create movie Example:
+// const data1 = `{
+//   movieId: "movieId",
+//   length: "120",
+//   title: "Rafi is annoying",
+//   type: "Horror",
+//   rentalPrice: "10$",
+//   year: 2023,
+// }`;
+
+// const response = await fetch("https://movies.admin/create", {
+//   method: "POST",
+//   body: data1,
+// });
