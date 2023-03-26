@@ -7,7 +7,7 @@
 1. Implement skip + limit with 2 DDL
 2. Implement skip + limit with Buttons prev&next
 
-skip = 10
+skip = 10    
 limit = 10
 
 changed>skip = 15 current state>limit = 10
