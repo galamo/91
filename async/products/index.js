@@ -4,28 +4,57 @@ const DOM = {
 };
 const DEFAULT_NUMBER_OF_PRODUCTS = 5;
 
+let limit = 0;
+let skip = 0;
+let currentProductsLength = 0;
+
 function init() {
   const limitsOptionsArray = [
     { value: 5, text: 5 },
     { value: 10, text: 10, selected: true },
     { value: 15, text: 15 },
     { value: 20, text: 20 },
+    { value: 36, text: 36 },
   ];
   const selectOption = getSelect(limitsOptionsArray, (value) => {
-    getProductsHandler(value);
+    skip = 0;
+    limit = Number(value);
+    getProductsHandler(limit, skip);
   });
 
   DOM.controllers.append(selectOption);
   const defaultValue = limitsOptionsArray.find((item) => item.selected);
-  getProductsHandler(defaultValue?.value || DEFAULT_NUMBER_OF_PRODUCTS);
+  const defaultNum = defaultValue?.value || DEFAULT_NUMBER_OF_PRODUCTS;
+  limit = defaultNum;
+  getProductsHandler(defaultNum, skip);
+
+  const prevButton = getButton("Prev");
+  const nextButton = getButton("Next");
+
+  prevButton.addEventListener("click", function () {
+    if (skip - limit < 0) {
+      skip = 0;
+    } else {
+      skip = skip - limit;
+    }
+    getProductsHandler(limit, skip);
+  });
+  nextButton.addEventListener("click", function () {
+    if (currentProductsLength < limit) return;
+    skip = skip + limit;
+    getProductsHandler(limit, skip);
+  });
+
+  DOM.controllers.append(prevButton, nextButton);
 }
 init();
-async function getProductsHandler(limit) {
+async function getProductsHandler(limit, skip) {
   try {
     showLoader();
-    const result = await getProducts(limit);
+    const result = await getProducts(limit, skip);
     const products = result.products;
     if (!Array.isArray(products)) throw new Error("Api error");
+    currentProductsLength = products.length;
     draw(products);
   } catch (error) {
     swal({
@@ -61,8 +90,10 @@ function drawProduct(product) {
   DOM.content.append(div);
 }
 
-async function getProducts(limit = 10) {
-  const result = await fetch(`https://dummyjson.com/products?limit=${limit}`);
+async function getProducts(limit = 10, skip = 0) {
+  const result = await fetch(
+    `https://dummyjson.com/products?limit=${limit}&skip=${skip}`
+  );
   const json = await result.json();
   return json;
 }
@@ -82,4 +113,11 @@ function removeLoader() {
   if (loader) {
     loader.remove();
   }
+}
+
+function getButton(innerText) {
+  const button = document.createElement("button");
+  button.innerText = innerText;
+  button.classList.add("btn", "btn-secondary");
+  return button;
 }

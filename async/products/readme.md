@@ -10,8 +10,8 @@
 skip = 10    
 limit = 10
 
-changed>skip = 15 current state>limit = 10
-changed>limit = 5 current state>skip = 15  
-changed>skip = 0 current state>limit 5
+changed > skip = 15 current state>limit = 10
+changed > limit = 5 current state>skip = 15  
+changed > skip = 0 current state>limit 5
 
 3. understand POST.reqeust.js
