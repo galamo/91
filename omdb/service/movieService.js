@@ -8,3 +8,12 @@ async function searchMoviesApi(searchParam) {
   const resultJson = await result.json();
   return resultJson.Search;
 }
+
+async function getMovieByIdApi(movieId) {
+  if (typeof movieId !== "string") throw new Error("Missing param");
+  const result = await fetch(`${searchBaseUrl}&i=${movieId}`, {
+    method: "GET",
+  });
+  const resultJson = await result.json();
+  return resultJson;
+}
