@@ -15,6 +15,6 @@ interface ICar {
 }
 
 
-const car: ICar = { lp: "12345", color:"BLUE", manufacturer: "blbla", year: "2022" }
+const car: ICar = { lp: "12345", color:"BLUE", manufacturer: "blbla", year: "2022", owner:"Lea Balet" }
 
 console.log(car.color)
