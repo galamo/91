@@ -1,4 +1,15 @@
-const functions = require("../fakerGalJs/index");
-const a = 1;
+const faker = require("fakergaljs");
 
-console.log(functions);
+const users = [];
+for (let index = 0; index < 300; index++) {
+  users.push(getUser());
+}
+
+function getUser() {
+  return {
+    userName: faker.generateUser(),
+    age: faker.generateAge(),
+    birthDate: faker.generateBirthDate(),
+  };
+}
+console.log(users);
