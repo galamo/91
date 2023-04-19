@@ -1,0 +1,19 @@
+{
+  "name": "my-first-package",
+  "version": "9.0.0",
+  "description": "this package is only test",
+  "main": "index.js",
+  "scripts": {
+    "test": "no test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ont git"
+  },
+  "keywords": [
+    "not",
+    "key"
+  ],
+  "author": "gal amouyal",
+  "license": "MIT"
+}
