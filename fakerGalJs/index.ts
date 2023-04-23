@@ -10,12 +10,16 @@ function generateBirthDate() {
   return new Date().toISOString();
 }
 
+function generateUserObject() {
+  return {
+    userName: generateUser(),
+    age: generateAge(),
+    bd: generateBirthDate(),
+  };
+}
+
 // test
 // console.log(generateBirthDate(), generateAge(), generateUser());
 
-module.exports = {
-  generateUser,
-  generateAge,
-  generateBirthDate,
-  a: "test",
-};
+export { generateUser, generateAge, generateBirthDate };
+export default generateUserObject;
