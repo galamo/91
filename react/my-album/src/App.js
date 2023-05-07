@@ -3,6 +3,8 @@ import "./App.css";
 import AlbumCard from "./components/AlbumCard";
 import "./container.css";
 import css from "./app.module.css";
+import AlbumEvent from "./components/AlbumEvent";
+
 function App() {
   return (
     <div>
@@ -11,6 +13,26 @@ function App() {
       <MyHeader text="My Products Application" />
       <MyHeader />
       <MyButton color="blue" />
+      <div className="albumContainer">
+        <AlbumEvent
+          eventName="Tomer's Birthday"
+          date={"5/7/2020, 6:53:07 PM"}
+          type={"Birthday"}
+          numberOfImages={10}
+        />
+        <AlbumEvent
+          eventName="Rafi's Exit"
+          date={"5/7/2030, 6:53:07 PM"}
+          type={"Prison"}
+          numberOfImages={100}
+        />
+        <AlbumEvent
+          eventName="Tomer's Wedding"
+          date={"5/7/2023, 6:53:07 PM"}
+          type={"Wedding"}
+          numberOfImages={40}
+        />
+      </div>
       <div className="albumContainer">
         <AlbumCard
           imageUrl="https://www.thatbangkoklife.com/wp-content/uploads/2020/03/koh-nang-yuan.jpg"
