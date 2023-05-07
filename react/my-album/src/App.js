@@ -9,10 +9,10 @@ function App() {
   return (
     <div>
       <MyHeader text="My Album Application" />
-      <MyHeader text="My Cars Application" />
-      <MyHeader text="My Products Application" />
-      <MyHeader />
-      <MyButton color="blue" />
+      {/* <MyHeader text="My Cars Application" /> */}
+      {/* <MyHeader text="My Products Application" /> */}
+      {/* <MyHeader /> */}
+      {/* <MyButton color="blue" /> */}
       <div className="albumContainer">
         <AlbumEvent
           eventName="Tomer's Birthday"

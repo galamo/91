@@ -24,3 +24,4 @@ function getColorByNumberOfImages(number) {
 }
 
 export default AlbumEvent;
+// ⭐

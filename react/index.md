@@ -17,4 +17,8 @@ Starter kit, tool
 - create component button - MyButton that recieve a prop = text, and render a button with the relevant text ( color red by default)
 - advanced - support the MyButton component to recieve a color for the button text
 
-good luck!
+# Homework 7/5
+
+1. Create new React Application - countriesApp
+2. Use the countries api data ( no need to implement fetch - copy paste the data)
+3. Show the countries by using Cards - flag, name, population
