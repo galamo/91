@@ -4,7 +4,43 @@ import AlbumCard from "./components/AlbumCard";
 import "./container.css";
 import css from "./app.module.css";
 import AlbumEvent from "./components/AlbumEvent";
-
+const dummyDataEvents = [
+  {
+    eventName: "Avi's Pessah",
+    date: "5/7/2020, 6:53:07 PM",
+    type: "Holiday",
+    numberOfImages: 50,
+    rank: 10,
+  },
+  {
+    eventName: "Noy's Driving license",
+    date: "5/7/2020, 6:53:07 PM",
+    type: "Test",
+    numberOfImages: 0,
+    rank: 3,
+  },
+  {
+    eventName: "Tomer's Birthday",
+    date: "5/7/2020, 6:53:07 PM",
+    type: "Test",
+    numberOfImages: 0,
+    rank: 3,
+  },
+  {
+    eventName: "Tomer's Wedding",
+    date: "5/7/2020, 6:53:07 PM",
+    type: "Test",
+    numberOfImages: 0,
+    rank: 3,
+  },
+  {
+    eventName: "Rafi's Exit",
+    date: "5/7/2020, 6:53:07 PM",
+    type: "Test",
+    numberOfImages: 0,
+    rank: 3,
+  },
+];
 function App() {
   return (
     <div>
@@ -14,24 +50,17 @@ function App() {
       {/* <MyHeader /> */}
       {/* <MyButton color="blue" /> */}
       <div className="albumContainer">
-        <AlbumEvent
-          eventName="Tomer's Birthday"
-          date={"5/7/2020, 6:53:07 PM"}
-          type={"Birthday"}
-          numberOfImages={10}
-        />
-        <AlbumEvent
-          eventName="Rafi's Exit"
-          date={"5/7/2030, 6:53:07 PM"}
-          type={"Prison"}
-          numberOfImages={100}
-        />
-        <AlbumEvent
-          eventName="Tomer's Wedding"
-          date={"5/7/2023, 6:53:07 PM"}
-          type={"Wedding"}
-          numberOfImages={40}
-        />
+        {dummyDataEvents.map((eventObj) => {
+          return (
+            <AlbumEvent
+              eventName={eventObj.eventName}
+              date={eventObj.date}
+              type={eventObj.type}
+              numberOfImages={eventObj.numberOfImages}
+              rank={eventObj.rank}
+            />
+          );
+        })}
       </div>
       <div className="albumContainer">
         <AlbumCard
