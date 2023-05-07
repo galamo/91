@@ -17,13 +17,4 @@ Starter kit, tool
 - create component button - MyButton that recieve a prop = text, and render a button with the relevant text ( color red by default)
 - advanced - support the MyButton component to recieve a color for the button text
 
-
-
-
-## Ready for the TASK???
-1. Ajax
-2. statistcs
-3. countries api
-4. DOM
-
 good luck!
