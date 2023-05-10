@@ -4,7 +4,7 @@ function EventRank(props) {
   if (rank < 0 || rank > 10) return null;
   let stars = [];
   for (let index = 0; index < rank; index++) {
-    stars.push(<span>⭐</span>);
+    stars.push(<span key={index}>⭐</span>);
   }
   return (
     <span>

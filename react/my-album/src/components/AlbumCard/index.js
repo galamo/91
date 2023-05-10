@@ -1,10 +1,11 @@
 // import "./index.css";
 import { useState } from "react";
+import Comments from "../Comments";
 import css from "./style.module.css";
 const MULTIPLE_FACTOR_IMAGE = 30;
 function AlbumCard(props) {
   const { imageUrl, description, date } = props;
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState("white");
   const [imageWIdth, setImageWidth] = useState(200);
   const [imageHeight, setImageHeight] = useState(200);
 
@@ -29,7 +30,7 @@ function AlbumCard(props) {
       <input
         type={"text"}
         onChange={(event) => {
-          console.log(event.target.value);
+          // console.log(event.target.value);
           setColor(event.target.value);
         }}
       />
@@ -43,6 +44,7 @@ function AlbumCard(props) {
         <p> {`The description is: ${description}`} </p>
         <img src={imageUrl} height={imageHeight} width={imageWIdth} />
         <h4> {new Date(date).toLocaleString()} </h4>
+        <Comments />
       </div>
     </div>
   );

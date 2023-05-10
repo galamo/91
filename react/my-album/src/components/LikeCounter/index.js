@@ -3,7 +3,7 @@ const likeUrl =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNfPQ_67ERoFGt-YVPMfxNecMI4XENQvCeDKWV7aih&s";
 function LikeCounter() {
   const [counter, setCounter] = useState(0);
-  console.log("Like counter render");
+  //   console.log("Like counter render");
   function incrementCounter() {
     setCounter(counter + 1);
   }

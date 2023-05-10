@@ -8,7 +8,16 @@ function AlbumEvent(props) {
   const numberOfImagesColor = getColorByNumberOfImages(numberOfImages);
   return (
     <div className={css.eventCard}>
-      <h2>{eventName}</h2>
+      <div>
+        <h2>{eventName}</h2>
+        <button
+          onClick={() => {
+            props.onDelete(eventName);
+          }}
+        >
+          X
+        </button>
+      </div>
       <span>{date}</span>
       <h3> {type} </h3>
       {numberOfImages ? (

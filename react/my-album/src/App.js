@@ -69,7 +69,8 @@ const dummyDataEvents = [
 ];
 function App() {
   const [theme, setTheme] = useState("light");
-  console.log("App is render!!!!");
+  const [albumsEvents, setAlbumsEvents] = useState(dummyDataEvents);
+  // console.log("App is render!!!!");
   return (
     <div className={theme === "light" ? css.lightTheme : css.darkTheme}>
       <MyHeader text="My Album Application" />
@@ -97,14 +98,21 @@ function App() {
       {/* <MyHeader /> */}
       {/* <MyButton color="blue" /> */}
       <div className="albumContainer">
-        {dummyDataEvents.map((eventObj) => {
+        {albumsEvents.map((eventObj) => {
           return (
             <AlbumEvent
+              key={`${eventObj.eventName}${eventObj.date}`}
               eventName={eventObj.eventName}
               date={eventObj.date}
               type={eventObj.type}
               numberOfImages={eventObj.numberOfImages}
               rank={eventObj.rank}
+              onDelete={(eName) => {
+                const newAlbumsEvents = albumsEvents.filter(
+                  (ae) => ae.eventName !== eName
+                );
+                setAlbumsEvents(newAlbumsEvents);
+              }}
             />
           );
         })}
@@ -113,6 +121,7 @@ function App() {
         {dummyDataAlbums.map((albumCard) => {
           return (
             <AlbumCard
+              key={`${albumCard.imageUrl}${albumCard.date}`}
               imageUrl={albumCard.imageUrl}
               description={albumCard.description}
               date={albumCard.date}
