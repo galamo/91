@@ -3,7 +3,7 @@ export default function Comments() {
   const [userName, setUserName] = useState("");
   const [comment, setComment] = useState("");
   const [allComments, setAllComments] = useState([]);
-//   console.log(allComments);
+  //   console.log(allComments);
   function setUserNameInput(event) {
     const value = event.target.value;
     setUserName(value);
@@ -13,7 +13,7 @@ export default function Comments() {
     setComment(value);
   }
   function addCommentHandler() {
-      if (!userName || !comment) return;
+    if (!userName || !comment) return;
     const newComment = { userName, comment };
     setAllComments([...allComments, newComment]);
     setUserName("");
@@ -41,9 +41,19 @@ export default function Comments() {
         {allComments.map((singleComment) => {
           return (
             <SingleComment
-              //   userName={singleComment.userName}
-              //   comment={singleComment.comment}
+              key={singleComment.comment}
               {...singleComment}
+              deleteSingleComment={(
+                currentUserToDelete,
+                currentCommentToDelete
+              ) => {
+                const newComments = allComments.filter(
+                  (c) =>
+                    c.userName !== currentUserToDelete &&
+                    c.comment !== currentCommentToDelete
+                );
+                setAllComments(newComments);
+              }}
             />
           );
         })}
@@ -58,6 +68,14 @@ function SingleComment(props) {
     <div style={{ padding: "10px", margin: "10px", background: "blue" }}>
       <span>{userName}</span>
       <p>{comment}</p>
+      <button
+        onClick={() => {
+          props.deleteSingleComment(userName, comment);
+        }}
+      >
+        {" "}
+        Delete{" "}
+      </button>
     </div>
   );
 }

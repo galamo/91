@@ -22,3 +22,9 @@
 2. add button delete
 3. clicking on the delete will lunch onDelete function in the parent component
    button here => <SingleComment/> delete logic here => <Comments>
+
+# Homework
+
+1. Add an option to increase the font size in the comment using a button +
+2. Add an option to decrease the font size in the comment using a button -
+3. support comments adding,removing comments in AlbumEvent
