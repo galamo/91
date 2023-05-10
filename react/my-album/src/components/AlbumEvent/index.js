@@ -1,4 +1,5 @@
 import EventRank from "../EventRank";
+import LikeCounter from "../LikeCounter";
 import css from "./style.module.css";
 
 function AlbumEvent(props) {
@@ -19,6 +20,7 @@ function AlbumEvent(props) {
         </span>
       ) : null}
       <EventRank rank={rank} />
+      <LikeCounter />
     </div>
   );
 }

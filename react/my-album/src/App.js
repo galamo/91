@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 import AlbumCard from "./components/AlbumCard";
 import "./container.css";
@@ -67,9 +68,30 @@ const dummyDataEvents = [
   },
 ];
 function App() {
+  const [theme, setTheme] = useState("light");
+  console.log("App is render!!!!");
   return (
-    <div>
+    <div className={theme === "light" ? css.lightTheme : css.darkTheme}>
       <MyHeader text="My Album Application" />
+      {`current State of theme is: ${theme}`}
+      <button
+        onClick={() => {
+          if (theme === "light") {
+            setTheme("dark"); // theme = dark
+          } else {
+            setTheme("light"); // theme = light
+          }
+        }}
+        style={{
+          background: "blue",
+          color: "white",
+          padding: "10px",
+          margin: "10px",
+          cursor: "pointer",
+        }}
+      >
+        Change Theme to: {theme === "light" ? "Dark" : "Light"}
+      </button>
       {/* <MyHeader text="My Cars Application" /> */}
       {/* <MyHeader text="My Products Application" /> */}
       {/* <MyHeader /> */}
