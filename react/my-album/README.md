@@ -28,3 +28,12 @@
 1. Add an option to increase the font size in the comment using a button +
 2. Add an option to decrease the font size in the comment using a button -
 3. support comments adding,removing comments in AlbumEvent
+
+# EX5
+
+1. pull the repository
+2. run `npm install` inside the folder ( to get axios)
+3. create `Pokemons` Component
+4. Fetch the pokemons from the url: `https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`
+5. use useEffect & useState
+6. Show the result in the component
