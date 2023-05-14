@@ -1,3 +1,4 @@
+import Comments from "../Comments";
 import EventRank from "../EventRank";
 import LikeCounter from "../LikeCounter";
 import css from "./style.module.css";
@@ -30,6 +31,7 @@ function AlbumEvent(props) {
       ) : null}
       <EventRank rank={rank} />
       <LikeCounter />
+      <Comments extraHeader="Of Events" />
     </div>
   );
 }

@@ -1,5 +1,6 @@
-import { useState } from "react";
-export default function Comments() {
+import { useDebugValue, useState } from "react";
+export default function Comments(props) {
+  const { extraHeader } = props;
   const [userName, setUserName] = useState("");
   const [comment, setComment] = useState("");
   const [allComments, setAllComments] = useState([]);
@@ -29,7 +30,7 @@ export default function Comments() {
           <input type={"text"} value={userName} onChange={setUserNameInput} />
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span>Comment:</span>
+          <span>Comment {extraHeader}:</span>
           <input type={"text"} value={comment} onChange={setCommentInput} />
         </div>
         <div style={{ textAlign: "right" }}>
@@ -63,18 +64,32 @@ export default function Comments() {
 }
 
 function SingleComment(props) {
+  const [currentFontSize, setCurrentFontSize] = useState(15);
   const { userName, comment } = props;
   return (
     <div style={{ padding: "10px", margin: "10px", background: "blue" }}>
       <span>{userName}</span>
-      <p>{comment}</p>
+      <p style={{ fontSize: `${currentFontSize}px` }}>{comment} </p>
       <button
         onClick={() => {
           props.deleteSingleComment(userName, comment);
         }}
       >
-        {" "}
-        Delete{" "}
+        Delete
+      </button>
+      <button
+        onClick={() => {
+          setCurrentFontSize(currentFontSize + 1);
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          setCurrentFontSize(currentFontSize - 1);
+        }}
+      >
+        -
       </button>
     </div>
   );

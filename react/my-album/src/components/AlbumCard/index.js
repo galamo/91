@@ -4,7 +4,7 @@ import Comments from "../Comments";
 import css from "./style.module.css";
 const MULTIPLE_FACTOR_IMAGE = 30;
 function AlbumCard(props) {
-  const { imageUrl, description, date } = props;
+  const { imageUrl, description, date, deleteSingleItem } = props;
   const [color, setColor] = useState("white");
   const [imageWIdth, setImageWidth] = useState(200);
   const [imageHeight, setImageHeight] = useState(200);
@@ -15,8 +15,19 @@ function AlbumCard(props) {
     setImageHeight(250);
     setImageWidth(250);
   }
+
+  const isDeleteWorking = typeof deleteSingleItem === "function";
   return (
     <div className={css.albumCard}>
+      {isDeleteWorking ? (
+        <button
+          onClick={() => {
+            deleteSingleItem(imageUrl);
+          }}
+        >
+          DELETE ME
+        </button>
+      ) : null}
       <input
         min={1}
         max={10}

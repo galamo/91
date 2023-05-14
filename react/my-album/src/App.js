@@ -5,6 +5,8 @@ import AlbumCard from "./components/AlbumCard";
 import "./container.css";
 import css from "./app.module.css";
 import AlbumEvent from "./components/AlbumEvent";
+import Users from "./components/Users";
+ 
 const dummyDataAlbums = [
   {
     imageUrl:
@@ -70,10 +72,12 @@ const dummyDataEvents = [
 function App() {
   const [theme, setTheme] = useState("light");
   const [albumsEvents, setAlbumsEvents] = useState(dummyDataEvents);
+  const [albumsCards, setAlbumsCards] = useState(dummyDataAlbums);
   // console.log("App is render!!!!");
   return (
     <div className={theme === "light" ? css.lightTheme : css.darkTheme}>
       <MyHeader text="My Album Application" />
+      <Users />
       {`current State of theme is: ${theme}`}
       <button
         onClick={() => {
@@ -118,13 +122,21 @@ function App() {
         })}
       </div>
       <div className="albumContainer">
-        {dummyDataAlbums.map((albumCard) => {
+        {albumsCards.map((albumCard) => {
           return (
             <AlbumCard
               key={`${albumCard.imageUrl}${albumCard.date}`}
               imageUrl={albumCard.imageUrl}
               description={albumCard.description}
               date={albumCard.date}
+              deleteSingleItem={(imageUrl) => {
+                const cardIndexToDelete = albumsCards.findIndex(
+                  (a) => a.imageUrl === imageUrl
+                );
+                const copy = [...albumsCards];
+                copy.splice(cardIndexToDelete, 1);
+                setAlbumsCards(copy);
+              }}
             />
           );
         })}
