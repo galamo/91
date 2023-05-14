@@ -7,7 +7,7 @@ function Users() {
   useEffect(() => {
     async function getUsers() {
       try {
-        const users = await axios.get("https://andomuser.me/api/?results=20");
+        const users = await axios.get("https://randomuser.me/api/?results=20");
         const { data } = users;
         setUsers(data.results);
       } catch (ex) {
